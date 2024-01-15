@@ -22,6 +22,8 @@ that takes a single parameter userInput.
 begin by utilizing JavaScript’s toLowerCase() function to make the userInput all lowercase.
 3. When getting the user’s choice, you should also check to make sure that the user typed 
 a valid choice: ‘rock’, ‘paper’, or ‘scissors’.
+4. Test the function by calling it with valid and invalid input, and printing the results to the console.
+You can delete this when you know your function works.
 */
 
 const getUserChoice = (userInput) => {
@@ -32,3 +34,20 @@ const getUserChoice = (userInput) => {
         console.log('Error!');
     }
 }
+console.log(getUserChoice('Paper')); // should print 'paper'
+console.log(getUserChoice('fork')); // should print 'Error!' and `undefined`
+
+const getComputerChoice =  () => {
+    let number = Math.floor(Math.random () * 3);
+    switch (number) {
+      case 0:
+      return 'rock';
+      break;
+      case 1:
+      return 'paper';
+      break;
+      case 2:
+      return 'scissors';
+      break;
+    }
+  }
