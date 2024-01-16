@@ -30,7 +30,7 @@ const getUserChoice = (userInput) => {
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
         return userInput;
     } else {
-        console.log('Error!');
+        console.log('Error, please type: rock, paper or scissors.');
     }
 }
 
@@ -129,7 +129,26 @@ console.log(determineWinner('paper', 'rock')); // prints something like 'The use
 12.
 Everything is set up. Now you need to start the game and log the results.
 Create a function named playGame.
-Inside the playGame() function, create a variable named userChoice set equal to the result of calling getUserChoice(), passing in either 'rock', 'paper', or 'scissors' as an argument.
-Create another variable named computerChoice, and set it equal to the result of calling getComputerChoice().
+Inside the playGame() function, create a variable named userChoice set equal to the result of 
+calling getUserChoice(), passing in either 'rock', 'paper', or 'scissors' as an argument.
+Create another variable named computerChoice, and set it equal to the result of calling 
+getComputerChoice().
 Under both of these variables, use console.log to print them to the console.
 */
+ const playGame = () => {
+    const userChoice = getUserChoice('rock');
+    const computerChoice = getComputerChoice();
+    console.log('You threw: ' + userChoice);
+    console.log('The computer threw: ' + computerChoice);
+
+/*
+13. Finally, let’s determine who won.
+Inside the playGame() function, call the determineWinner() function. 
+Pass in the userChoice and computerChoice variables as its parameters. 
+Make sure to put this function call inside of a console.log() statement so you can see the result.
+Then, to start the game, call the playGame() function on the last line of your program.
+*/
+    console.log(determineWinner(userChoice, computerChoice));
+
+ }
+ playGame();
