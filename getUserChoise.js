@@ -18,13 +18,12 @@ Start the program and display the results.*/
 1. The user should be able to choose ‘rock’, ‘paper’, or ‘scissors’ when the game starts.
 Using const and arrow function syntax, create a function named getUserChoice 
 that takes a single parameter userInput.
+
 2. Since a user can pass in a parameter, such as ‘Rock’ or ‘rock’ with different capitalizations, 
 begin by utilizing JavaScript’s toLowerCase() function to make the userInput all lowercase.
+
 3. When getting the user’s choice, you should also check to make sure that the user typed 
-a valid choice: ‘rock’, ‘paper’, or ‘scissors’.
-4. Test the function by calling it with valid and invalid input, and printing the results to the console.
-You can delete this when you know your function works.
-*/
+a valid choice: ‘rock’, ‘paper’, or ‘scissors’.*/
 
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
@@ -34,12 +33,23 @@ const getUserChoice = (userInput) => {
         console.log('Error!');
     }
 }
+
+/*4. Test the function by calling it with valid and invalid input, and printing the results to the console.
+You can delete this when you know your function works.*/
+
 console.log(getUserChoice('Paper')); // should print 'paper'
 console.log(getUserChoice('fork')); // should print 'Error!' and `undefined`
 
+/*5. Now we need to have the computer make a choice.
+Create a new function named getComputerChoice with no parameters. 
+Inside its block, utilize Math.random() and Math.floor() to get a whole number 
+between 0 and 2. Then, depending on the number, return either 'rock', 
+'paper', or 'scissors'.*/
+
+
 const getComputerChoice =  () => {
-    let number = Math.floor(Math.random () * 3);
-    switch (number) {
+    randomNumber = Math.floor(Math.random () * 3);
+    switch (randomnNumber) {
       case 0:
       return 'rock';
       break;
@@ -49,5 +59,21 @@ const getComputerChoice =  () => {
       case 2:
       return 'scissors';
       break;
+    }
+  }
+
+/*6. Test the function by calling it multiple times and printing the results to the console.
+You can delete this when you know your function works.*/
+
+console.log(getComputerChoice());
+
+  /* 7. Now it’s time to determine a winner.
+Create a function named determineWinner that takes two parameters named userChoice and computerChoice. This function will compare the two choices played and then return if the human player won, lost, or tied.
+Let’s deal with the tie condition first. Within the determineWinner() function, write an if statement that checks if the userChoice parameter equals the computerChoice parameter. If so, return a string that the game was a tie.
+*/
+
+  const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === computerChoice) {
+        return console.log('The game was a tie.');
     }
   }
