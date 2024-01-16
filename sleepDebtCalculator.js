@@ -48,7 +48,33 @@ const getSleepHours = day => {
     return 'Error, please type day of the week.'
  }
 }
-/* Test the function by calling it multiple times and printing the results to the console.
+/* 
+3. Test the function by calling it multiple times and printing the results to the console.
 You can remove the tests when you know your function works.*/
 
 //console.log(getSleepHours('monday'));
+
+/*
+5. Now that you’ve written a function to get the sleep hours for each night, we need to do three things:
+Get the total sleep hours that you actually slept
+Get the ideal sleep hours that you prefer
+Calculate the sleep debt, if any.
+To get the total sleep hours that you actually slept, 
+create a new function named getActualSleepHours that takes no parameters.
+*/
+const getActualSleepHours = () => 
+/*
+Inside the getActualSleepHours() function, call the getSleepHours() function 
+for each day of the week. Add the results together and return the sum using an implicit return.
+*/
+    getSleepHours('manday') + 
+    getSleepHours('tuesday') + 
+    getSleepHours('wednesday') + 
+    getSleepHours('thursday') + 
+    getSleepHours('friday') +
+    getSleepHours('saturday') + 
+    getSleepHours('sunday');
+
+
+
+
