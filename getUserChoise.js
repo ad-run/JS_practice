@@ -114,5 +114,13 @@ Write logic that will return a winner.
             console.log('The user won! Scissors cut paper.');
         }
     }
-
   }
+
+  /*
+  11.Check off this task when you’ve finished testing. 
+  The expected output depends on what you wrote in the determineWinner() function.
+  */
+
+console.log(determineWinner('paper', 'scissors')); // prints something like 'The computer won!'
+console.log(determineWinner('paper', 'paper')); // prints something like 'The game is a tie!'
+console.log(determineWinner('paper', 'rock')); // prints something like 'The user won!'
