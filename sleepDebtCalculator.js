@@ -64,10 +64,10 @@ create a new function named getActualSleepHours that takes no parameters.
 */
 const getActualSleepHours = () => 
 /*
-Inside the getActualSleepHours() function, call the getSleepHours() function 
+5. Inside the getActualSleepHours() function, call the getSleepHours() function 
 for each day of the week. Add the results together and return the sum using an implicit return.
 */
-    getSleepHours('manday') + 
+    getSleepHours('monday') + 
     getSleepHours('tuesday') + 
     getSleepHours('wednesday') + 
     getSleepHours('thursday') + 
@@ -75,6 +75,16 @@ for each day of the week. Add the results together and return the sum using an i
     getSleepHours('saturday') + 
     getSleepHours('sunday');
 
+/*
+6.To get the ideal sleep hours that you prefer, create a function named getIdealSleepHours with no parameters.
+Inside the function, declare a variable named idealHours and set its value to your ideal hours per night. 
+Then return the idealHours multiplied by 7.
+You’ll want to multiply by 7 to get the total hours you prefer per week.
+*/
 
+    const getIdealSleepHours = () => {
+        const idealHours = 8;
+        return idealHours * 7;
+    }
 
 
