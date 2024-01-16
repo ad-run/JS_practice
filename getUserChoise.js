@@ -85,14 +85,26 @@ If so, return a message that the computer won.
 If not, return a message that the user won.*/
     if (userChoice === 'rock') {
         if (computerChoice === 'paper') {
-            return console.log('The computer won!');                    
+            return console.log('The computer won! Paper covers rock.');                    
         } else {
-            console.log('The user won!');
+            console.log('The user won! Rock destroys scissors.');
         }
     }
 /*
-Next, write another if statement for if the userChoice is 'paper'.
+9. Next, write another if statement for if the userChoice is 'paper'.
 Inside this if statement, the computerChoice must be either 'scissors' or 'rock'. 
 Write logic that will return a winner. 
 */
+    if (userChoice === 'paper') {
+        if (computerChoice === 'scissors') {
+            return console.log('The computer won! Scissors cut paper.');
+        } else {
+            console.log('The user won! Paper covers rock.')
+        }
+    }
+/*
+
+
+*/
+
   }
