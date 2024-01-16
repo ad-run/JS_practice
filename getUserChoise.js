@@ -103,8 +103,16 @@ Write logic that will return a winner.
         }
     }
 /*
-
-
+10. Next, write yet another if statement for if the userChoice is 'scissors'.
+Inside of this if statement, the computerChoice must either be 'rock' or 'paper'. 
+Write logic that will return a winner.
 */
+    if (userChoice === 'scissors') {
+        if (computerChoice === 'rock') {
+            return console.log('The computer won! Rock destroys scissors.');
+        } else {
+            console.log('The user won! Scissors cut paper.');
+        }
+    }
 
   }
