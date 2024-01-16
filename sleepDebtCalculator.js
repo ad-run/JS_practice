@@ -87,4 +87,8 @@ You’ll want to multiply by 7 to get the total hours you prefer per week.
         return idealHours * 7;
     }
 
+/* 7.Test your two new functions by calling them and printing the results to the console.
+You can remove the tests when you know your functions works.*/
 
+//console.log(getActualSleepHours());
+//console.log(getIdealSleepHours());
