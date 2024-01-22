@@ -20,11 +20,13 @@ For instance, if you got 8 hours of sleep on Monday night, calling getSleepHours
 Use an if/else or switch statement to implement this.
 */
 
+let day = 'monday';
+
 const getSleepHours = day => {
- let day;
+ 
  switch (day) {
     case 'monday':
-        return 8;
+        return 6;
         break;
     case 'tuesday':
         return 8;
@@ -33,16 +35,16 @@ const getSleepHours = day => {
         return 8
         break;
     case 'thursday':
-        return 8
+        return 9
         break;
     case 'friday':
         return 8
         break;
     case 'saturday':
-        return 8
+        return 5
         break;
     case 'sunday':
-        return 8
+        return 6
         break;
     default:
     return 'Error, please type day of the week.'
@@ -83,15 +85,15 @@ You’ll want to multiply by 7 to get the total hours you prefer per week.
 */
 
     const getIdealSleepHours = () => {
-        const idealHours = 8;
+        const idealHours = 7.5;
         return idealHours * 7;
     }
 
 /* 7.Test your two new functions by calling them and printing the results to the console.
 You can remove the tests when you know your functions works.*/
 
-//console.log(getActualSleepHours());
-//console.log(getIdealSleepHours());
+console.log(getActualSleepHours());
+console.log(getIdealSleepHours());
 
 /*
 
@@ -116,14 +118,14 @@ If the actual sleep is less than the ideal sleep, log to the console that the us
 add the hours the user is over or under their ideal sleep in each log statement in 
 calculateSleepDebt().
 */
-    if (actualSleepHours === idealHours) {
+    if (actualSleepHours === idealSleepHours) {
         console.log('You got the perfect amount of sleep.');
     } else if (actualSleepHours > idealSleepHours) {
         console.log('You got ' + (actualSleepHours - idealSleepHours) + ' more hours sleep than needed.');
     }
      else 
         console.log('You got ' + (idealSleepHours-actualSleepHours) + ' hours less sleep than you needed this week. Get some rest.');
-        ;
+        
 
     }
 

@@ -37,8 +37,8 @@ const getUserChoice = (userInput) => {
 /*4. Test the function by calling it with valid and invalid input, and printing the results to the console.
 You can delete this when you know your function works.*/
 
-console.log(getUserChoice('Paper')); // should print 'paper'
-console.log(getUserChoice('fork')); // should print 'Error!' and `undefined`
+//console.log(getUserChoice('Paper')); // should print 'paper'
+//console.log(getUserChoice('fork')); // should print 'Error!' and `undefined`
 
 /*5. Now we need to have the computer make a choice.
 Create a new function named getComputerChoice with no parameters. 
@@ -49,7 +49,7 @@ between 0 and 2. Then, depending on the number, return either 'rock',
 
 const getComputerChoice =  () => {
     randomNumber = Math.floor(Math.random () * 3);
-    switch (randomnNumber) {
+    switch (randomNumber) {
       case 0:
       return 'rock';
       break;
@@ -65,7 +65,7 @@ const getComputerChoice =  () => {
 /*6. Test the function by calling it multiple times and printing the results to the console.
 You can delete this when you know your function works.*/
 
-console.log(getComputerChoice());
+//console.log(getComputerChoice());
 
   /* 7. Now it’s time to determine a winner.
 Create a function named determineWinner that takes two parameters named userChoice and computerChoice. This function will compare the two choices played and then return if the human player won, lost, or tied.
@@ -74,7 +74,7 @@ Let’s deal with the tie condition first. Within the determineWinner() function
 
   const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
-        return console.log('The game was a tie.');
+        return 'The game was a tie.';
     }
     
 /* 8. If the game is not a tie, you’ll need to determine a winner.
@@ -85,9 +85,9 @@ If so, return a message that the computer won.
 If not, return a message that the user won.*/
     if (userChoice === 'rock') {
         if (computerChoice === 'paper') {
-            return console.log('The computer won! Paper covers rock.');                    
+            return 'The computer won! Paper covers rock.';                    
         } else {
-            console.log('The user won! Rock destroys scissors.');
+            return 'The user won! Rock destroys scissors.';
         }
     }
 /*
@@ -97,9 +97,9 @@ Write logic that will return a winner.
 */
     if (userChoice === 'paper') {
         if (computerChoice === 'scissors') {
-            return console.log('The computer won! Scissors cut paper.');
+            return 'The computer won! Scissors cut paper.';
         } else {
-            console.log('The user won! Paper covers rock.')
+            return 'The user won! Paper covers rock.';
         }
     }
 /*
@@ -109,9 +109,9 @@ Write logic that will return a winner.
 */
     if (userChoice === 'scissors') {
         if (computerChoice === 'rock') {
-            return console.log('The computer won! Rock destroys scissors.');
+            return 'The computer won! Rock destroys scissors.';
         } else {
-            console.log('The user won! Scissors cut paper.');
+            return 'The user won! Scissors cut paper.';
         }
     }
   }
@@ -121,9 +121,9 @@ Write logic that will return a winner.
   The expected output depends on what you wrote in the determineWinner() function.
   */
 
-console.log(determineWinner('paper', 'scissors')); // prints something like 'The computer won!'
-console.log(determineWinner('paper', 'paper')); // prints something like 'The game is a tie!'
-console.log(determineWinner('paper', 'rock')); // prints something like 'The user won!'
+//console.log(determineWinner('paper', 'scissors')); // prints something like 'The computer won!'
+//console.log(determineWinner('paper', 'paper')); // prints something like 'The game is a tie!'
+//console.log(determineWinner('paper', 'rock')); // prints something like 'The user won!'
 
 /*
 12.
@@ -136,7 +136,7 @@ getComputerChoice().
 Under both of these variables, use console.log to print them to the console.
 */
  const playGame = () => {
-    const userChoice = getUserChoice('rock');
+    const userChoice = getUserChoice('scissors');
     const computerChoice = getComputerChoice();
     console.log('You threw: ' + userChoice);
     console.log('The computer threw: ' + computerChoice);
