@@ -26,6 +26,7 @@ let storyWords = story.split(' ');
 //console.log(storyWords);
 let unnecessaryWord = 'literally';
 let misspelledWord = 'beautifull';
+let badWord = 'freaking';
 
 /* 
 2. For a better visual comparison of the original and edited stories, 
@@ -47,13 +48,37 @@ storyWords.forEach(word => {
 
 console.log(count);
 
-// 6.
+/*6. Below the storyWords variable declaration, declare the variable 
+'unnecessaryWord'. We want to filter out the value of unnecessaryWord 
+from the story.
+Within the filter() method’s callback function body, 
+return 'word' only if it is NOT equal to 'unnecessaryWord'.
+Check the story string in the console to make sure it doesn’t 
+include the word “literally”. The first instance of “literally” 
+was previously in the first sentence.*/
 
 storyWords = storyWords.filter(word => {
     return word !== unnecessaryWord;
 });
 
-// 7.
+/* 7. Now that we’ve removed the unnecessary words, 
+let’s take care of any misspelled words in the story. 
+We can reassign storyWords to a new array of spell-checked words 
+using the .map() method!
+
+Reassign storyWords to equal the invocation of the .map() 
+method on the storyWords array.
+
+Setword as a parameter of .map()‘s callback function.
+
+In the callback’s body, define a conditional statement to check 
+if the word argument is equal to the 'misspelledWord' variable. 
+If it is, return the correct spelling of the string, “beautiful”. 
+If not, return word.
+
+Take a look at the story string in the console to see the correct spellings! 
+You can see one instance of the spellchecked word in the first sentence of the story.
+*/
 
 storyWords = storyWords.map(word => {
     if (word === misspelledWord) {
@@ -62,6 +87,28 @@ storyWords = storyWords.map(word => {
         return word;
     }
 });
+
+/*
+8. There’s is “bad” word in story! Let’s apply the .findIndex() method 
+to storyWords to find the index of the bad word.
+
+Start by declaring a variable called 'badWordIndex' and setting 
+it to the invocation of .findIndex() on the storyWords array.
+
+The .findIndex() callback function should check each word to see 
+if it equals the badWord variable, and return the index 
+of the found word.
+
+Then, log badWordIndex to the console.*/
+let badWordIndex = storyWords.findIndex(word => {
+    if (word === badWord) {
+        return word;
+    }
+});
+
+console.log(badWordIndex);
+
+storyWords[badWordIndex] = 'really';
 
 console.log(storyWords.join(' '));
 
@@ -96,33 +143,5 @@ variable for each revision of the story.
 Below where you logged the 'count' variable, 
 reassign the 'storyWords' variable to equal the invocation of the .filter() 
 method on the 'storyWords' array. Give the .filter() method a callback function 
-with a parameter of word.
-
-6. Below the storyWords variable declaration, declare the variable 
-'unnecessaryWord'. We want to filter out the value of unnecessaryWord 
-from the story.
-Within the filter() method’s callback function body, 
-return 'word' only if it is NOT equal to 'unnecessaryWord'.
-Check the story string in the console to make sure it doesn’t 
-include the word “literally”. The first instance of “literally” 
-was previously in the first sentence.
-
-7. Now that we’ve removed the unnecessary words, 
-let’s take care of any misspelled words in the story. 
-We can reassign storyWords to a new array of spell-checked words 
-using the .map() method!
-
-Reassign storyWords to equal the invocation of the .map() 
-method on the storyWords array.
-
-Setword as a parameter of .map()‘s callback function.
-
-In the callback’s body, define a conditional statement to check 
-if the word argument is equal to the 'misspelledWord' variable. 
-If it is, return the correct spelling of the string, “beautiful”. 
-If not, return word.
-
-Take a look at the story string in the console to see the correct spellings! 
-You can see one instance of the spellchecked word in the first sentence of the story.
-*/
+with a parameter of word.*/
 
