@@ -37,5 +37,45 @@ to separate each array element with a space in the string.
 Place the .join() method invocation as an argument of a console.log() 
 statement to log the final story to the console.
 */
+let count = 0;
+
+storyWords.forEach((word) => {
+    count++;
+});
+console.log(count);
 
 console.log(storyWords.join(' '));
+/* 3.Now it’s time to start editing the story by manipulating the storyWords array. 
+We want to be able to see the changes, so be sure your console.log() of the joined story 
+is the last line of code in your editor.
+First, above the console.log() statement that uses the .join() method, 
+create a variable named 'count' that stores the number 0.
+
+Directly below count, use a .forEach() method to iterate over the storyWords array. 
+As an argument of the forEach() method, create an empty function to be used as 
+the callback function.
+
+While ES6 arrow syntax is recommended for the callback function, 
+feel free to use any syntax you’re comfortable with.
+
+4. For each word in the storyWords array, we want the count variable to increment 
+by one.
+Add a parameter named word to the callback function of the .forEach() method 
+to be used to store the current element when iterating over the storyWords array. 
+Each time storyWord iterates, increment count by one.
+
+Below the .forEach() method, log count to see how many words are in the story.
+
+5. A word count of 181 is a bit long for this story. 
+Let’s filter out all instances of the word “literally” to shorten 
+the story and remove the unnecessary word. We will reassign the 
+filtered story to the same storyWords variable by applying the .filter() method! 
+Throughout the project, we’ll use this approach of reassigning the storyWords 
+variable for each revision of the story.
+
+Below where you logged the count variable, 
+reassign the storyWords variable to equal the invocation of the .filter() 
+method on the storyWords array. Give the .filter() method a callback function 
+with a parameter of word.
+*/
+
