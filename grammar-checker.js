@@ -25,6 +25,7 @@ let story = 'Last weekend, I took literally the most beautifull bike ride of my 
 let storyWords = story.split(' ');
 //console.log(storyWords);
 let unnecessaryWord = 'literally';
+let misspelledWord = 'beautifull';
 
 /* 
 2. For a better visual comparison of the original and edited stories, 
@@ -46,8 +47,20 @@ storyWords.forEach(word => {
 
 console.log(count);
 
+// 6.
+
 storyWords = storyWords.filter(word => {
     return word !== unnecessaryWord;
+});
+
+// 7.
+
+storyWords = storyWords.map(word => {
+    if (word === misspelledWord) {
+        return 'beautiful'
+    } else {
+        return word;
+    }
 });
 
 console.log(storyWords.join(' '));
@@ -93,5 +106,23 @@ return 'word' only if it is NOT equal to 'unnecessaryWord'.
 Check the story string in the console to make sure it doesn’t 
 include the word “literally”. The first instance of “literally” 
 was previously in the first sentence.
+
+7. Now that we’ve removed the unnecessary words, 
+let’s take care of any misspelled words in the story. 
+We can reassign storyWords to a new array of spell-checked words 
+using the .map() method!
+
+Reassign storyWords to equal the invocation of the .map() 
+method on the storyWords array.
+
+Setword as a parameter of .map()‘s callback function.
+
+In the callback’s body, define a conditional statement to check 
+if the word argument is equal to the 'misspelledWord' variable. 
+If it is, return the correct spelling of the string, “beautiful”. 
+If not, return word.
+
+Take a look at the story string in the console to see the correct spellings! 
+You can see one instance of the spellchecked word in the first sentence of the story.
 */
 
