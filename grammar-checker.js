@@ -24,6 +24,7 @@ let story = 'Last weekend, I took literally the most beautifull bike ride of my 
 
 let storyWords = story.split(' ');
 //console.log(storyWords);
+let unnecessaryWord = 'literally';
 
 /* 
 2. For a better visual comparison of the original and edited stories, 
@@ -39,12 +40,18 @@ statement to log the final story to the console.
 */
 let count = 0;
 
-storyWords.forEach((word) => {
-    count++;
+storyWords.forEach(word => {
+    return count++;
 });
+
 console.log(count);
 
+storyWords = storyWords.filter(word => {
+    return word !== unnecessaryWord;
+});
+
 console.log(storyWords.join(' '));
+
 /* 3.Now it’s time to start editing the story by manipulating the storyWords array. 
 We want to be able to see the changes, so be sure your console.log() of the joined story 
 is the last line of code in your editor.
@@ -73,9 +80,18 @@ filtered story to the same storyWords variable by applying the .filter() method!
 Throughout the project, we’ll use this approach of reassigning the storyWords 
 variable for each revision of the story.
 
-Below where you logged the count variable, 
-reassign the storyWords variable to equal the invocation of the .filter() 
-method on the storyWords array. Give the .filter() method a callback function 
+Below where you logged the 'count' variable, 
+reassign the 'storyWords' variable to equal the invocation of the .filter() 
+method on the 'storyWords' array. Give the .filter() method a callback function 
 with a parameter of word.
+
+6. Below the storyWords variable declaration, declare the variable 
+'unnecessaryWord'. We want to filter out the value of unnecessaryWord 
+from the story.
+Within the filter() method’s callback function body, 
+return 'word' only if it is NOT equal to 'unnecessaryWord'.
+Check the story string in the console to make sure it doesn’t 
+include the word “literally”. The first instance of “literally” 
+was previously in the first sentence.
 */
 
