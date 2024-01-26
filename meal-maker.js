@@ -6,7 +6,7 @@ Use your knowledge of getters and setters to make sure anyone who uses the new f
 can generate a meal and a price for Today’s Special without any embarrassing errors!
 */
 const menu = {
-    _meal: '',
+    _meal: (''),
     _price: 0,
     set meal (mealToCheck) {
         if (typeof mealToCheck === "string") {
@@ -17,9 +17,16 @@ const menu = {
         if (typeof priceToCheck === "number") {
             return this._price = priceToCheck;
         }
+    },
+    get todaysSpecial() {
+        if (this._meal && this._price) {
+            return `Today's Special is ${this._meal} for $${this._price}!`;
+        } else {
+            return 'Meal or price was not set correctly!';
+        }
     }
 }
 
-menu.meal = 'todays pizza';
+menu.meal = 'pizza';
 menu.price = 20;
-console.log(menu);
+console.log(menu.todaysSpecial);
