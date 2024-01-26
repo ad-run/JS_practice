@@ -110,12 +110,8 @@ You can see one instance of the spellchecked word in the first sentence of the s
 */
 
 storyWords = storyWords.map(word => {
-    if (word === misspelledWord) {
-        return 'beautiful'
-    } else {
-        return word;
-    }
-});
+    return word === misspelledWord ? 'beautiful' : word;
+    })
 
 /*
 8. There’s is “bad” word in story! Let’s apply the .findIndex() method 
