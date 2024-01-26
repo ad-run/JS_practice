@@ -5,3 +5,21 @@ them to set a meal and price each morning for Today’s Special.
 Use your knowledge of getters and setters to make sure anyone who uses the new function 
 can generate a meal and a price for Today’s Special without any embarrassing errors!
 */
+const menu = {
+    _meal: '',
+    _price: 0,
+    set meal (mealToCheck) {
+        if (typeof mealToCheck === "string") {
+            return this._meal = mealToCheck;
+        }
+    },
+    set price (priceToCheck) {
+        if (typeof priceToCheck === "number") {
+            return this._price = priceToCheck;
+        }
+    }
+}
+
+menu.meal = 'todays pizza';
+menu.price = 20;
+console.log(menu);
