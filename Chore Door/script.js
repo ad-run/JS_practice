@@ -83,6 +83,10 @@ let gameOver = (status) => {
     }
  }
 
- //Starting the Game
+ //Starting the Game. All doors are closed at the start of the game
 
- 
+ let startRound = () {
+    doorImage1.src = closedDoorPath;
+    doorImage2.src = closedDoorPath;
+    doorImage3.src = closedDoorPath;
+ } 
