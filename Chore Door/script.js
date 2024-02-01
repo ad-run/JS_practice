@@ -14,6 +14,9 @@ let beachDoorPath = 'https://content.codecademy.com/projects/chore-door/images/b
 let spaceDoorPath = 'https://content.codecademy.com/projects/chore-door/images/space.svg';
 let closedDoorPath = 'https://content.codecademy.com/projects/chore-door/images/closed_door.svg';
 let currentlyPlaying = true;
+let openDoor1;
+let openDoor2;
+let openDoor3
 
 //Checking if door is closed
 
@@ -62,3 +65,24 @@ let gameOver = (status) => {
  }
 
  //Choosing a Random Chore Door
+
+ const randomChoreDoorGenerator = () => {
+    let choreDoor = Math.floor(Math.random() * numClosedDoors);
+    if (choreDoor === 0) {
+        openDoor1 = beachDoorPath;
+        openDoor2 = botDoorPath;
+        openDoor3 = spaceDoorPath;
+    } else if (choreDoor === 1) {
+        openDoor1 = beachDoorPath;
+        openDoor2 = botDoorPath;
+        openDoor3 = spaceDoorPath;
+    } else {
+        openDoor1 = beachDoorPath;
+        openDoor2 = spaceDoorPath;
+        openDoor3 = botDoorPath;
+    }
+ }
+
+ //Starting the Game
+
+ 
