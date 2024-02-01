@@ -33,3 +33,12 @@ const isClicked = (door) => {
     }
  }
 
+// Writing Play and Game Over Logic
+
+let gameOver = (status) => {
+    if (status === 'win') {
+        return document.getElementsByClassName('button')[0].innerHTML = 'You win! Play again?'
+    } else {
+        return document.getElementsByClassName('button')[0].innerHTML = 'Game over! Play again?'
+    }
+}
