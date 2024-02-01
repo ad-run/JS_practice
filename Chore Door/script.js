@@ -13,7 +13,8 @@ let botDoorPath = 'https://content.codecademy.com/projects/chore-door/images/rob
 let beachDoorPath = 'https://content.codecademy.com/projects/chore-door/images/beach.svg';
 let spaceDoorPath = 'https://content.codecademy.com/projects/chore-door/images/space.svg';
 let closedDoorPath = 'https://content.codecademy.com/projects/chore-door/images/closed_door.svg';
- 
+let currentlyPlaying = true;
+
 //Checking if door is closed
 
 const isClicked = (door) => {
@@ -41,4 +42,23 @@ let gameOver = (status) => {
     } else {
         return document.getElementsByClassName('button')[0].innerHTML = 'Game over! Play again?'
     }
+    currentlyPlaying = false;
 }
+
+//Check game progress
+
+ let playDoor = (door) => {
+    //variable vill decrease by one every time a door is opened
+    numClosedDoor --;
+    if (numClosedDoor === 0) {
+        gameOver('win');
+    }
+    /*Check if calling the isBot() function with the argument of door returns 
+    true. */
+   
+    if (isBot(door) === true) {
+        gameOver();
+    }
+ }
+
+ //Choosing a Random Chore Door
