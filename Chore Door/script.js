@@ -1,4 +1,5 @@
-// Accessing the elements of the door images.
+// Access HTML elements
+
 let doorImage1 = document.getElementById('door1');
 let doorImage2 = document.getElementById('door2');
 let doorImage3 = document.getElementById('door3');
@@ -13,10 +14,12 @@ let botDoorPath = 'https://content.codecademy.com/projects/chore-door/images/rob
 let beachDoorPath = 'https://content.codecademy.com/projects/chore-door/images/beach.svg';
 let spaceDoorPath = 'https://content.codecademy.com/projects/chore-door/images/space.svg';
 let closedDoorPath = 'https://content.codecademy.com/projects/chore-door/images/closed_door.svg';
-let currentlyPlaying = true;
+
 let openDoor1;
 let openDoor2;
-let openDoor3
+let openDoor3;
+let currentlyPlaying = true;
+let numClosedDoors = 3;
 
 //Checking if door is closed
 
@@ -39,28 +42,29 @@ const isClicked = (door) => {
 
 // Writing Play and Game Over Logic
 
-let gameOver = (status) => {
+const gameOver = (status) => {
     if (status === 'win') {
-        return document.getElementsByClassName('button')[0].innerHTML = 'You win! Play again?'
+        startButton[0].innerHTML = 'You win! Play again?';
     } else {
-        return document.getElementsByClassName('button')[0].innerHTML = 'Game over! Play again?'
+        startButton[0].innerHTML = 'Game over! Play again?';
+
     }
     currentlyPlaying = false;
 }
 
 //Check game progress
 
- let playDoor = (door) => {
+ const playDoor = (door) => {
     //variable vill decrease by one every time a door is opened
-    numClosedDoor --;
-    if (numClosedDoor === 0) {
-        gameOver('win');
+    numClosedDoors --
+    if (numClosedDoors === 0) {
+        return gameOver('win');
     }
     /*Check if calling the isBot() function with the argument of door returns 
     true. */
    
     if (isBot(door) === true) {
-        gameOver();
+        return gameOver();
     }
  }
 
@@ -83,10 +87,45 @@ let gameOver = (status) => {
     }
  }
 
+ //
+
+ doorImage1.onclick = () => {
+    if (currentlyPlaying && isClicked(doorImage1)) {
+      doorImage1.src = openDoor1;
+      playDoor(doorImage1);
+    }
+  }
+  
+  doorImage2.onclick = () => {
+    if (currentlyPlaying && isClicked(doorImage2)) {
+      doorImage2.src = openDoor2;
+      playDoor(doorImage2);
+    }
+  }
+  
+  doorImage3.onclick = () => {
+    if (currentlyPlaying && isClicked(doorImage3)) {
+      doorImage3.src = openDoor3;
+      playDoor(doorImage3);
+    }
+  }
+  
+  startButton.onclick = () => {
+    if (currentlyPlaying === false) {
+      startRound();
+    }
+  }
+
  //Starting the Game. All doors are closed at the start of the game
 
- let startRound = () {
+ const startRound = () => {
     doorImage1.src = closedDoorPath;
     doorImage2.src = closedDoorPath;
     doorImage3.src = closedDoorPath;
  } 
+
+ numClosedDoors = 3;
+ currentlyPlaying = true;
+ document.getElementsByClassName('button').innerHTML = 'Good Luck!';
+ randomChoreDoorGenerator();
+ startRound();
