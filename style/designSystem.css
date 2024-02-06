@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;800;900&family=Solway:wght@300;400;500;700;800&display=swap');
+/*removing default styles of browser*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-1);
+    background-color: var(--color-blue-25);
+}
 :root {
     --h1: 40px;
     --h2: 32px;
@@ -12,7 +20,8 @@
 
     --body: 14px;
 
-    --font-1: 'Merriweather Sans', sans-serif;
+    --font-1: 'Solway', serif;
+    --font-2: 'Crimson Pro', serif;
 
     --color-blue-100: cadetblue;
     --color-blue-75: rgba(95, 158, 160, 0.75);
@@ -31,10 +40,74 @@
 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-1);
-    background-color: var(--color-blue-25);
+/* Style rules for common buttons */
+
+.white-btn,
+.dark-btn
+{
+    cursor: pointer;
+    font-size: var(--h5);
+    font-family: var(--font-2);
+    font-weight: 800;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 30px;
+
+}
+.white-btn
+{
+    color: var(--color-dark-25);
+    background-color: var(--color-white-75);
+}
+
+.dark-btn {
+    color: var(--color-white-75);
+    background-color: var(--color-dark-50);
+}
+/* Style rules for text colors */
+
+.text-dark {
+    color: var(--color-dark-100);
+}
+.text-white {
+    color: var(--color-white-100);
+}
+.text-blue {
+ color: var(--color-blue-100);
+}
+/* Style rules for label */
+.label {
+ font-size: var(--label);
+ letter-spacing: var(--ls);
+ text-transform: uppercase;
+ font-family: var(--font-2);
+}
+/* Style rules for title */
+.title {
+    font-size: var(--h1);
+}
+/* Style rules for text */
+
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+
+/*Common Style rules*/
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.responsive-image {
+    max-width: 300px;
+    height: auto;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

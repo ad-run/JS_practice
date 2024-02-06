@@ -1,15 +1,10 @@
-/*
-removing default styles from browser
-*/
+
 
 .responsive-image {
     max-width: 300px;
     height: auto;
 }
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
+
 
 .flex {
     display: flex;
@@ -27,7 +22,6 @@ removing default styles from browser
     text-align: center;
     padding-top: 40px;
     padding-bottom: 30px;
-    color: var(--color-white-75);
 }
 .sectionOne--nav {
     gap: 3px;
@@ -42,18 +36,9 @@ removing default styles from browser
     cursor: pointer;
     width: 100%;
     text-align: center;
-    color: var(--color-dark);
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
-}
-
-.item1 a:link {
-    color: var(--color-white-75);
-    background-color: var(--color-blue-50);
-}
-.item1 a: {
-    background-color: var(--color-blue-50);
 }
 
 
@@ -65,4 +50,10 @@ removing default styles from browser
 .sectionTwo {
     height: auto;
     width: 100%;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
