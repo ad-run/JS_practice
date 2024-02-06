@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap');
+:root {
+    --h1: 40px;
+    --h2: 32px;
+    --h3: 28px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 16px;
+
+    --label: 16px;
+    --ls: 5px;
+
+    --body: 14px;
+
+    --font-1: 'Merriweather Sans', sans-serif;
+
+    --color-blue-100: cadetblue;
+    --color-blue-75: rgba(95, 158, 160, 0.75);
+    --color-blue-50: rgba(95, 158, 160, 0.5);
+    --color-blue-25: rgba(95, 158, 160, 0.25);
+
+    --color-dark-100: black;
+    --color-dark-75: rgba(0, 0, 0, 0.75);
+    --color-dark-75: rgba(0, 0, 0, 0.5);
+    --color-dark-75: rgba(0, 0, 0, 0.25);
+
+    --color-white-100: white;
+    --color-white-75: rgba(255, 255, 255, 0.75);
+    --color-white-50: rgba(255, 255, 255, 0.5);
+    --color-white-25: rgba(255, 255, 255, 0.25);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-1);
+    background-color: var(--color-blue-25);
+}
