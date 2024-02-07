@@ -1,5 +1,6 @@
 .sectionOne {
-    background-color: var(--color-blue-100);
+    background-color: var(--color-blue-5);
+    color: var(--color-blue-100);
     height: auto;
     width: 100%;
 }
@@ -7,6 +8,7 @@
     text-align: center;
     padding-top: 40px;
     padding-bottom: 30px;
+    color: var(--color-blue-100);
 }
 .sectionOne--nav {
     gap: 3px;
@@ -15,7 +17,7 @@
 .item1,
 .item2,
 .item3 {
-    background-color: var(--color-blue-50);
+    background-color: var(--color-blue-100);
     width: fit-content;
     padding: 3px 8px;
     cursor: pointer;
@@ -27,14 +29,10 @@
 }
 
 
-.item1 a:active {
-    background-color: var(--color-blue-50);
-}
-
-
 .sectionTwo {
     height: auto;
     width: 100%;
+    background-color: var(--color-blue-50);
 }
 .card {
     display: flex;
