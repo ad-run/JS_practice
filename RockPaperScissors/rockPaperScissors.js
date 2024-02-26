@@ -1,3 +1,15 @@
+const templateElement = document.getElementById('templateHB');
+const templateSource = templateElement.innerHTML;
+const template = Handlebars.compile(templateSource);
+const context = {
+    title: 'Rock, Paper, or Scissors',
+    description: 'Rock paper scissors is a classic two player game. Each player chooses either rock, paper, or scissors. The items are compared, and whichever player chooses the more powerful item wins. The possible outcomes are: Rock destroys scissors. Scissors cut paper. Paper covers rock. If there is a tie, then the game ends in a draw.'
+};
+const compiledHtml = template(context);
+const projectText = document.getElementById('information');
+projectText.innerHTML = compiledHtml;
+
+
 /*Rock, Paper, or Scissors
 Rock paper scissors is a classic two player game. Each player chooses either rock, paper, or scissors. The items are compared, and whichever player chooses the more powerful item wins.
 

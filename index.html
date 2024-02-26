@@ -3,47 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/designSystem.css">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Java Script Practice projects</title>
+    <link rel="stylesheet" href="styles/designSystem.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="src/images/logo/AD-run logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script id="templateHB" type="text/x-handlebars-template">
+        <p class="sectionOne__left--label label text-white">{{subtitle}}</p>
+        <h2 class="sectionOne__left--title title text-white">{{title}}</h2>
+        <div class="sectionOne__left--text text-white">{{body}}</div>
+        <button onclick="location.href='projects.html'" class="sectionOne__left--btn white-btn" type="button">Projects</button>
+    </script>
+    <title>AD-run web development portfolio - home</title>
 </head>
 <body>
-    <div class="container">
-    <div class="sectionOne">
-        <div class="sectionOne--title text-white">
-            <h1>JavaScript projects</h1>
+    
+    
+<div class="hero">
+    <div class="navbar container">
+        <div class="navbar__logo text-white">
+            <img src="src/images/Logo/AD-run logo.png" class="navbar__logo--image" alt="">
+            <div class="navbar__logo--text">AD web portfolio</div>
+            
         </div>
-        <div class="sectionOne--nav flex">
-
-
-           <div class="item1 text-white"><a href="sleep-debt-calculator.html">Sleep dept calculator</a> </div>
-            <div class="item2 text-white"><a href="rock-paper-scissors.html">Rock Paper Scissors</a> </div>
-            <div class="item2 text-white"><a href="meal-maker.html">Meal maker</a> </div>
-            <div class="item3 text-white"><a href="Chore Door/index.html">Chore Door</a></div>
+        <div class="navbar__menu hidden text-white">
+            <a href="index.html" class="navbar__menu--1">Home</a>
+            <a href="projects.html" class="navbar__menu--2">Projects</a>
+            <a href="" class="navbar__menu--3">Services</a>
+            <a href="" class="navbar__menu--4">Contact</a>
         </div>
+        <div class="navbar__icons">
+            <i class="bi bi-list"></i>
+            <i class="bi bi-x-lg hide"></i>
+        </div>
+
     </div>
-    <div class="sectionTwo flex">
-        <div class="card">
-            <img src="jpeg/sleeping.jpeg" alt="Sleep dept calculator" class="responsive-image">
-            <button class="white-btn">Read more</button>
-        </div>
 
-        <div class="card">
-            <img src="jpeg/rockpaperscissors.jpeg" alt="Rock Paper Scissors" class="responsive-image">
-            <button class="white-btn">Read more</button>
+    <div class="sectionOne container grid">
+    
+        <div id="information" class="sectionOne__left flex">
         </div>
-        <div class="card">
-            <img src="jpeg/mealMaker.jpeg" alt="Meal maker" class="responsive-image">
-            <button class="white-btn">Read more</button>
-        </div>
-    <div class="card">
-        <img src="jpeg/door.jpeg" alt="Chore Door" class="responsive-image">
-        <button class="white-btn">Read more</button>
+       
+        <img src="src/images/hero/ad_web_hero.png" alt="" class="sectionOne__right responsive-image">
     </div>
+        
+    </div>
+</div>
+
+
+
+
+<div class="sectionTwo container">
+    <div class="sectionTwo__content  text-center flex">
+        <div class="sectionTwo__content--label label text-blue">Partners, languages and subjects
+            in Front end development</div>
+        <div class="sectionTwo__content--title title">Web development journey</div>
+        <div class="sectionTwo__content--text"><p>Web development journey, starts by mastering the fundamentals of HTML, CSS, and JavaScript. Progress in learning responsive design principles and use of version control system as Git. 
+            Learning Adobe Photoshop and Figma can significantly enhance your front-end web development skills. Adobe Photoshop is valuable for image manipulation and graphic design, 
+            while Figma useful in creating interactive prototypes and design workflows. Integrating these tools into your skill set will empower you to create aesthetic and user-friendly interfaces. I am using Visual Studio Code (VS Code) code editor that is popular, powerful and widely used in the field of front-end development.</p>
+       
+        <p>As my learning partners, I want to say thanks to Codecademy.com which keeps my skills sharp with hands-on projects and helps me stay updated on the latest tech trends. It will be interesting to experience a new way 
+            of learning here by use of new AI-powered learning feature.</p>
+       
+          <It>I am in learning process and I am using ChatGPT. It is a valuable learning tool in several ways. First, you can use it 
+            to clarify concepts and seek explanations. Second, you can ask ChatGPT to generate example code for specific tasks or to get recommendations on best practices 
+            in front-end development. It's important to collaborate with the programming community; their support helps to keep the learning and coding journey going. If my journey is inspiring you, that's great! Happy coding.</p>
+    </div>
+    </div>
+    <div class="sectionTwo__logo imageGrid">
+        
+        <img src="src/images/logo/html-1.svg" alt="HTML" class="sectionTwo__logo--1">
+        <img src="src/images/logo/css-3.svg" alt="css-3" class="sectionTwo__logo--2">
+        <img src="src/images/logo/javascript-1.svg" alt="javascript" class="sectionTwo__logo--3">
+        <img src="src/images/logo/adobe-photoshop-2.svg" alt="" class="sectionTwo__logo--11">
+        <img src="src/images/logo/codecademy.svg" alt="codecademy" class="sectionTwo__logo--4" id="codecademy">
+        <img src="src/images/logo/figma-5.svg" alt="" class="sectionTwo__logo--5" id="figma">
+        <img src="src/images/logo/git.svg" alt="" class="sectionTwo__logo--6">
+        <img src="src/images/logo/github-icon-1.svg" alt="" class="sectionTwo__logo--7">
+        <img src="src/images/logo/git-bash.svg" alt="" class="sectionTwo__logo--8">
+        <img src="src/images/logo/Google-Logo.wine.svg" alt="" class="sectionTwo__logo--9" id="google">
+        <img src="src/images/logo/ChatGPT_logo.svg.png" alt="" class="sectionTwo__logo--10">
+        <img src="src/images/logo/YouTube-Logo.wine.svg" alt="" class="sectionTwo__logo--12" id="youtube">
+        <img src="src/images/logo/Visual Studio Code.svg" alt="" class="sectionTwo__logo--13">
         
     </div>
 
 </div>
-    
+
+
+ 
 </body>
+<script src="main.js"></script> 
 </html>
