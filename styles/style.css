@@ -56,7 +56,9 @@
 /*
 Meal maker
 */
- 
+#mealMakerLogo{
+ border-radius: 12px;
+}
 .mealToday-btn {
     align-self: flex-start;
 }
@@ -64,7 +66,13 @@ Meal maker
  max-width: 70%;
 }
 #textForTodayMeal {
+    color: rgba(255, 228, 196, 0.5);
+}
+#meal,
+#dessert {
     color: bisque;
+    font-size: var(--h5);
+    text-indent: 5px;
 }
 .meal-list li{
     color: var(--color-white-75);

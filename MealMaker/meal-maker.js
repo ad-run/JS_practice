@@ -10,92 +10,168 @@ Desserts: Sweets and treats served at the end of a meal.*/
 const source = document.getElementById('templateHB').innerHTML;
 const template = Handlebars.compile(source);
 const context = {
-    label: 'Meal maker recipes',
-    title: 'In case you Need to Know How to Make',
-    introduction: '',
-dayDish: [    
-{group: 'Soupe',
-title: 'Chili soup',
-image: '../src/images/mealMaker/chili_soupe.jpeg',
-mealTime: 'Brunch, Lunch, Dinner',
-ingredients: '600 g ground beef, 1 liter tomato juice, 4 carrots, 2 paprika, 4 chili peppers, 2 onions, 1 celery, 4 garlic, 2 chili beans, chopped tomatoes, salt, pepper, 2 l. vegetable broth',
-instruction: '',
-timing: '1 hour',
-price: '100',
-left: false},
-{group: 'Soupe',
-title: 'Red beet soup',
-image: '../src/images/mealMaker/red_beet_soup.jpeg',
-mealTime: 'Brunch, Lunch, Dinner',
-ingredients: '2-3 red beet, 3 potato, 1 carrots, 1 onions, 2 garlic, salt, pepper, 2 l. vegetable broth',
-reciepe: '80',
-price: '',
-left: true},
-{group: 'Soupe',
-title: 'Fermented cabbage soup',
-image: '../src/images/mealMaker/cabbage_soupe.jpeg',
-mealTime: 'Brunch, Lunch, Dinner',
-ingredients: '600 g fermented cabbage, 3 potato, 1 onion, 1 carrot, salt, pepper, 2 l. vegetable broth',
-reciepe: '50',
-price: '',
-left: false},
-{group: 'Soupe',
-title: 'Vegetable soup with meat balls',
-image: '../src/images/mealMaker/soupe_with_meat.jpeg',
-mealTime: 'Brunch, Lunch, Dinner',
-ingredients: '300 g ground meat, 1 carrots, 1 onion, 1 leak, 1 celery, 1 garlic, cabbage, salt, pepper, 2 l. vegetable broth',
-reciepe: '',
-price: '80',
-left: true},
-{group: 'Dessert',
-title: 'Honney layer cake',
-image: '../src/images/mealMaker/honney_cake.jpeg',
-mealTime: 'At the end of a meal, party time',
-ingredients: '',
-reciepe: '',
-price: '500',
-left: false},
-{group: 'Dessert',
-title: 'Brownies with almond and pistachio',
-image: '../src/images/mealMaker/brownies.jpeg',
-mealTime: 'At the end of a meal, party time',
-ingredients: '',
-reciepe: '',
-price: '500',
-left: true},
-{group: 'Dessert',
-title: 'Carrot cake',
-image: '../src/images/mealMaker/carrot_cake.jpeg',
-mealTime: 'At the end of a meal, party time',
-ingredients: '',
-reciepe: '',
-price: '500',
-left: false},
-{group: 'Dessert',
-title: 'Lemon zucchini cake with poppy seads',
-image: '../src/images/mealMaker/meal_maker_logo.jpeg',
-mealTime: 'At the end of a meal, party time',
-ingredients: '',
-reciepe: '',
-price: '500',
-left: true},
-{group: 'Dessert',
-title: 'Natural yogurt with fruits and berries',
-image: '../src/images/mealMaker/meal_maker_logo.jpeg',
-mealTime: 'Breakfast, bruch, lunch',
-ingredients: '',
-reciepe: '',
-price: '500',
-left: false}
-]
+  label: "Meal maker recipes",
+  title: "In case you Need to Know How to Make",
+  dayDish: [
+    {
+      group: "Soupe",
+      title: "Chili soup",
+      image: "../src/images/mealMaker/chili_soupe.jpeg",
+      mealTime: "Brunch, Lunch, Dinner",
+      ingredients:
+        "600 g ground beef, 1 liter tomato juice, 4 carrots, 2 paprika, 4 chili peppers, 2 onions, 1 celery, 4 garlic, 2 chili beans, chopped tomatoes, salt, pepper, 2 l. vegetable broth",
+      instruction: "",
+      timing: "1 hour",
+      price: "100",
+      left: false,
+    },
+    {
+      group: "Soupe",
+      title: "Red beet soup",
+      image: "../src/images/mealMaker/red_beet_soup.jpeg",
+      mealTime: "Brunch, Lunch, Dinner",
+      ingredients:
+        "2-3 red beet, 3 potato, 1 carrots, 1 onions, 2 garlic, salt, pepper, 2 l. vegetable broth",
+      reciepe: "80",
+      price: "",
+      left: true,
+    },
+    {
+      group: "Soupe",
+      title: "Fermented cabbage soup",
+      image: "../src/images/mealMaker/cabbage_soupe.jpeg",
+      mealTime: "Brunch, Lunch, Dinner",
+      ingredients:
+        "600 g fermented cabbage, 3 potato, 1 onion, 1 carrot, salt, pepper, 2 l. vegetable broth",
+      reciepe: "50",
+      price: "",
+      left: false,
+    },
+    {
+      group: "Main dish",
+      title: "Thai-style pork stir-fry",
+      image: "../src/images/mealMaker/meal_maker_logo.jpeg",
+      mealTime: "Dinner",
+      ingredients:
+        "600 g pork, 1 carrots, 1 onion, 1 garlic clove (crushed), salt, 1 red chilli (deseeded and finely chopped) 1 red pepper(deseeded and sliced) 1 tbsp fish sauce, 1 tbsp soy sauce, 300 ml rice",
+      reciepe: "",
+      price: "80",
+      left: true,
+    },
+    {
+        group: "Main dish",
+        title: "Traditional Lithuanian Stuffed Cabbage Rolls",
+        image: "../src/images/mealMaker/meal_maker_logo.jpeg",
+        mealTime: "Dinner",
+        ingredients:
+        "1 medium size cabbage, 600 g ground pork, 140 g half cooked rice, 3 carrots, 1/2 onion, 2 tbsp. ketchup, 1 1/2 tbsp. sour cream,  1 cube chicken or vegetable bouillon, salt, black pepper",
+        reciepe: "",
+        price: "80",
+        left: false,
+      },
+    {
+        group: "Main dish",
+        title: "Taco",
+        image: "../src/images/mealMaker/meal_maker_logo.jpeg",
+        mealTime: "Dinner",
+        ingredients:
+          "600 g beef, taco spices, tortillas, seasoned vegetables fillings",
+        reciepe: "",
+        price: "80",
+        left: true,
+      },
+    {
+        group: "Soupe",
+        title: 'Smoked pork soup with barley',
+        image: "../src/images/mealMaker/meal_maker_logo.jpeg",
+        mealTime: "Brunch, Lunch, Dinner",
+        ingredients:
+          "600 g smoked pork, 300 g. barley, 3 potato, 1 onion, 1 carrot, salt, pepper, 2 l. water",
+        reciepe: "50",
+        price: "",
+        left: false,
+      },
+      {
+        group: "Soupe",
+        title: "Vegetable soup with meat balls",
+        image: "../src/images/mealMaker/soupe_with_meat.jpeg",
+        mealTime: "Brunch, Lunch, Dinner",
+        ingredients:
+          "300 g ground meat, 1 carrots, 1 onion, 1 leak, 1 celery, 1 garlic, cabbage, salt, pepper, 2 l. vegetable broth",
+        reciepe: "",
+        price: "80",
+        left: true,
+      },
+    {
+      group: "Dessert",
+      title: "Honney layer cake",
+      image: "../src/images/mealMaker/honney_cake.jpeg",
+      mealTime: "At the end of a meal, party time",
+      ingredients: "",
+      reciepe: "",
+      price: "500",
+      left: false,
+    },
+    {
+      group: "Dessert",
+      title: "Brownies with almond and pistachio",
+      image: "../src/images/mealMaker/brownies.jpeg",
+      mealTime: "At the end of a meal, party time",
+      ingredients: "",
+      reciepe: "",
+      price: "500",
+      left: true,
+    },
+    {
+      group: "Dessert",
+      title: "Carrot cake",
+      image: "../src/images/mealMaker/carrot_cake.jpeg",
+      mealTime: "At the end of a meal, party time",
+      ingredients: "",
+      reciepe: "",
+      price: "500",
+      left: false,
+    },
+    {
+      group: "Dessert",
+      title: "Lemon zucchini cake with poppy seads",
+      image: "../src/images/mealMaker/meal_maker_logo.jpeg",
+      mealTime: "At the end of a meal, party time",
+      ingredients: "",
+      reciepe: "",
+      price: "500",
+      left: true,
+    },
+    {
+      group: "Dessert",
+      title: "Natural yogurt with fruits and berries",
+      image: "../src/images/mealMaker/meal_maker_logo.jpeg",
+      mealTime: "Breakfast, bruch, lunch",
+      ingredients: "",
+      reciepe: "",
+      price: "500",
+      left: false,
+    },
+  ],
+};
 
-}
 const compiledHtml = template(context);
 const mealText = document.getElementById('mealInformation');
 mealText.innerHTML = compiledHtml;
 
+const meals = context.dayDish
+.filter((meal) => meal.group !== "Dessert")
+.map((meal) => meal.title);
 
+console.log(meals);
 
+const desserts = context.dayDish
+  .filter((dish) => dish.group === "Dessert")
+  .map((dessert) => dessert.title);
+
+console.log(desserts);
+
+/*console.log(mealsArray);*/
 
 /*
 Meal Maker
@@ -172,8 +248,6 @@ const getPrice = () => {
   menu.price = getPrice();
   console.log(menu.todaysSpecial);*/
 
-  let desserts = ['Brownies with almond and pistachio', 'Carrot cake', 'Apple pai', 'Jogurt with fresh fruits', 'Lemon zuccini cake with poppy seads', 'Honney layer cake'];
-  let meals = ['Chili soup', 'Red beet soup', 'Fermented cabbage soup', 'Vegetable soup with meat balls', 'Seefood soup', 'Smoked pork soup with barley', 'Taco', 'Thai chiling with ris'];
   let button = document.getElementById('mealToday-btn');
   let dayMeal = document.getElementById('meal');
   let dayDessert = document.getElementById('dessert');
