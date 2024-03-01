@@ -65,11 +65,11 @@ Meal maker
  max-width: 70%;
 }
 #textForTodayMeal {
-    color: rgba(255, 228, 196, 0.5);
+    color: rgb(255, 228, 196);
 }
 #meal,
 #dessert {
-    color: #ffe4c46e;
+    color: bisque;
     font-size: var(--h5);
     text-indent: 5px;
 }
@@ -83,6 +83,6 @@ Meal maker
     list-style-type: circle;
 }
 .background-mealMaker {
-    background-color: rgba(255, 228, 196, 0.377);
+    background-color: rgba(255, 228, 196, 0.5);
 
 }
