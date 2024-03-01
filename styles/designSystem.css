@@ -133,8 +133,12 @@ a {
 .subtitle-3 {
     font-size: var(--h3);
 }
-.subtitle-3 {
+.subtitle-4 {
     font-size: var(--h4);
+}
+.subtitle-5 {
+    font-size: var(--h5);
+    font-weight: 500;
 }
 /* Style rules for text */
 
@@ -226,7 +230,12 @@ a {
     padding: 40px 0;
     gap: 50px;
 }
-
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4px 0;
+    gap: 5px;
+}
 .flex {
     display: flex;
     flex-direction: column;

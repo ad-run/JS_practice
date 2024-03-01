@@ -9,6 +9,8 @@ Desserts: Sweets and treats served at the end of a meal.*/
 
 const source = document.getElementById('templateHB').innerHTML;
 const template = Handlebars.compile(source);
+
+
 const context = {
   label: "Meal maker recipes",
   title: "In case you Need to Know How to Make",
@@ -16,148 +18,188 @@ const context = {
     {
       group: "Soupe",
       title: "Chili soup",
+      taste: "Spicy, rich flavor",
       image: "../src/images/mealMaker/chili_soupe.jpeg",
       mealTime: "Brunch, Lunch, Dinner",
-      ingredients:
-        "600 g ground beef, 1 liter tomato juice, 4 carrots, 2 paprika, 4 chili peppers, 2 onions, 1 celery, 4 garlic, 2 chili beans, chopped tomatoes, salt, pepper, 2 l. vegetable broth",
-      instruction: "",
+      ingredients: "600 g ground beef, 1 liter tomato juice, 4 carrots, 2 paprikas, 4 chili peppers, 2 onions, 1 celery, 4 garlic, 2 can red kidney chili beans (drained and rinsed), 1 can chopped tomatoes, 2 tbs tomato paste, 1 tbs salt, 1/2 ts chili powder, 1/2 ts pepper, 2 l. beef broth, 3 ts olive oil",
+      instructions: "Heat olive oil in a large soup pot.; Add chopped onion, garlic, chili pepers and cook for 5 minutes.; Add ground beef and break it apart with a wooden spoon.; Add chopped tomatoes and paprikas, carrots, celery.; Add chili powder, tomato paste, salt, pepper.; Stir until well combined. Add tomato juice, beans, beef broth.; Cook 20-25 minutes.; Let the chili rest for 5-10 minutes before serving.; In addition as toppings you may also want to have shredded cheddar cheese and parsley.",
       timing: "1 hour",
       price: "100",
+      NutritionInfo: 'Serving Size: 1 slice Calories:',
       left: false,
     },
     {
       group: "Soupe",
       title: "Red beet soup",
+      taste: "Warm, sweet, and sour",
       image: "../src/images/mealMaker/red_beet_soup.jpeg",
       mealTime: "Brunch, Lunch, Dinner",
       ingredients:
-        "2-3 red beet, 3 potato, 1 carrots, 1 onions, 2 garlic, salt, pepper, 2 l. vegetable broth",
-      reciepe: "80",
+        "2-3 red beet, 3 potatoes, 1 carrot, 1 onion, 2 garlic, salt, pepper, 2 l. vegetable broth",
+        instructions: "",
+        timing: "1 hour",
       price: "",
       left: true,
     },
     {
       group: "Soupe",
-      title: "Fermented cabbage soup",
+      title: "Sauerkraut soup",
+      taste: "Simple, tasty and useful",
       image: "../src/images/mealMaker/cabbage_soupe.jpeg",
       mealTime: "Brunch, Lunch, Dinner",
       ingredients:
-        "600 g fermented cabbage, 3 potato, 1 onion, 1 carrot, salt, pepper, 2 l. vegetable broth",
-      reciepe: "50",
+        "300 g sauerkraut, 2 potatoes, 1 onion, 1 carrot, 100 g smoked bacon, 1.5 chicken broth cube, 1.5-2 liters water, 2 bay leaves, 1/2 ts dills, 3 tbs oil, 1/2 ts pepper, 1 ts salt",
+        instructions: "Cleanse the sauerkraut in a sieve, if very sour.; Bring 1.5 – 2 liters of water to a boil in a large pot with the broth cubes. Then insert the sauerkraut, bay leaves, and peppers. Cook about 15-20 minutes (until the sauerkraut becomes softer).; Heat a small amount of oil in a frying pan, add the chopped onion. Bake until soft, remove from the pan, and set aside.; In the same skillet, warm some more oil, include the grated carrots (grated with a larger grater), and fry until slightly soft.; Add the carrot, onion, and sliced bacon to the soup. Add salt, peppers, dills, and simmer until the sauerkraut becomes tender (about 10 more minutes). Taste to check whether additional salt or sourness is needed (if you desire more sourness – add lemon juice or sauerkraut liquid).; If the soup is too sour – include extra boiled water or a little sugar.",
+        timing: "1 hour",
       price: "",
       left: false,
     },
     {
       group: "Main dish",
       title: "Thai-style pork stir-fry",
+      taste: "Spicy, delicious",
       image: "../src/images/mealMaker/meal_maker_logo.jpeg",
       mealTime: "Dinner",
       ingredients:
         "600 g pork, 1 carrots, 1 onion, 1 garlic clove (crushed), salt, 1 red chilli (deseeded and finely chopped) 1 red pepper(deseeded and sliced) 1 tbsp fish sauce, 1 tbsp soy sauce, 300 ml rice",
-      reciepe: "",
+        instructions: "",
+        timing: "1 hour",
       price: "80",
       left: true,
     },
     {
         group: "Main dish",
         title: "Traditional Lithuanian Stuffed Cabbage Rolls",
+        taste: "",
         image: "../src/images/mealMaker/meal_maker_logo.jpeg",
         mealTime: "Dinner",
         ingredients:
         "1 medium size cabbage, 600 g ground pork, 140 g half cooked rice, 3 carrots, 1/2 onion, 2 tbsp. ketchup, 1 1/2 tbsp. sour cream,  1 cube chicken or vegetable bouillon, salt, black pepper",
-        reciepe: "",
+        instructions: "",
+        timing: "1 hour",
         price: "80",
         left: false,
       },
     {
         group: "Main dish",
         title: "Taco",
+        taste: "Savory and spicy",
         image: "../src/images/mealMaker/meal_maker_logo.jpeg",
         mealTime: "Dinner",
         ingredients:
           "600 g beef, taco spices, tortillas, seasoned vegetables fillings",
-        reciepe: "",
+          instructions: "",
+          timing: "1 hour",
         price: "80",
         left: true,
       },
     {
         group: "Soupe",
         title: 'Smoked pork soup with barley',
+        taste: "",
         image: "../src/images/mealMaker/meal_maker_logo.jpeg",
         mealTime: "Brunch, Lunch, Dinner",
         ingredients:
           "600 g smoked pork, 300 g. barley, 3 potato, 1 onion, 1 carrot, salt, pepper, 2 l. water",
-        reciepe: "50",
+          instructions: "",
+          timing: "1 hour",
         price: "",
         left: false,
       },
       {
         group: "Soupe",
         title: "Vegetable soup with meat balls",
+        taste: "",
         image: "../src/images/mealMaker/soupe_with_meat.jpeg",
         mealTime: "Brunch, Lunch, Dinner",
         ingredients:
           "300 g ground meat, 1 carrots, 1 onion, 1 leak, 1 celery, 1 garlic, cabbage, salt, pepper, 2 l. vegetable broth",
-        reciepe: "",
+          instructions: "",
+          timing: "1 hour",
         price: "80",
         left: true,
       },
     {
       group: "Dessert",
       title: "Honney layer cake",
+      taste: "delicious",
       image: "../src/images/mealMaker/honney_cake.jpeg",
-      mealTime: "At the end of a meal, party time",
-      ingredients: "",
-      reciepe: "",
+      mealTime: "At the end of a meal, for special occasions like birthdays and celebrations",
+      ingredients: "2 and 1/4 cups all purpose flour, 2 large eggs (room temperature), 1/2 cup butter, 1/2 cup flavourless oil, 1/2 cup honey, 1 cup brown sugar, 1/4 whole milk, 1/4 cup greek or natural yogurt, 2 and 1/2 ts baking powder, , 2 ts vanilla extract, 1 ts cinnamon, 1/2 ts salt",
+      instructions: "Preheat oven to 180 C.; In a large mixing bowl, add butter, oil and sugar. Mix ingredients with an electric mixer on low speed until until mixture is creamy. Add vanilla, eggs and honey. Mix all to combine.;  In a separate mixing bowl, whisk together flour, baking powder, cinnamon and salt. ; Add half of the dry ingredients, along with the yogurt and milk, to the butter mixture and mix carefully. Add remaining dry ingredients. Continue to mix carefully until cake batter is smooth and creamy.; Divide cake batter between two prepared pans and gently smooth the top using a spatula. Bake cakes for approximately 25-30 minutes.; Leave cakes to cool in their pans for 15-30 minutes. Then carefully remove cakes and transfer to a wire rack to cool completely.; Assemble cake. Slice cakes into two using a sharp knife. Place one cake layer on a serving plate. Generously cover layer in one portion of whipped cream.  Continue with remaining cake layers and cream, finishing with the fourth layer of cake. You’ll have one portion of cream leftover for decorating the top of the cake.; Use a small spatula to cover the top of the cake and the sides with buttercream. Use a piping bag fitted with a large round tip to pipe extra cream on top for decoration.",
+      timing: "1 hour",
       price: "500",
       left: false,
     },
     {
       group: "Dessert",
       title: "Brownies with almond and pistachio",
+      taste: "",
       image: "../src/images/mealMaker/brownies.jpeg",
-      mealTime: "At the end of a meal, party time",
+      mealTime: "At the end of a meal, party time, for special occasions like birthdays and celebrations",
       ingredients: "",
-      reciepe: "",
+      instructions: "",
+      timing: "1 hour",
       price: "500",
       left: true,
     },
     {
       group: "Dessert",
       title: "Carrot cake",
+      taste: "super soft and extra lush",
       image: "../src/images/mealMaker/carrot_cake.jpeg",
       mealTime: "At the end of a meal, party time",
       ingredients: "",
       reciepe: "",
-      price: "500",
+      instructions: "",
+      timing: "1 hour",
       left: false,
     },
     {
       group: "Dessert",
       title: "Lemon zucchini cake with poppy seads",
+      taste: "",
       image: "../src/images/mealMaker/meal_maker_logo.jpeg",
       mealTime: "At the end of a meal, party time",
       ingredients: "",
       reciepe: "",
-      price: "500",
+      instructions: "",
+      timing: "1 hour",
       left: true,
     },
     {
       group: "Dessert",
       title: "Natural yogurt with fruits and berries",
+      taste: "",
       image: "../src/images/mealMaker/meal_maker_logo.jpeg",
       mealTime: "Breakfast, bruch, lunch",
       ingredients: "",
-      reciepe: "",
+      instructions: "",
+      timing: "1 hour",
       price: "500",
       left: false,
     },
   ],
 };
 
+// Helper function to split ingredients string into an array
+Handlebars.registerHelper('splitIngredients', function(ingredients) {
+  return ingredients.split(', ');
+});
+// Helper function to split instructions step string into an array
+Handlebars.registerHelper('splitinstructionsStep', function(instructions) {
+  return instructions.split('; ');
+});
+console.log(context.dayDish[0].ingredients);
+
 const compiledHtml = template(context);
 const mealText = document.getElementById('mealInformation');
 mealText.innerHTML = compiledHtml;
+
+const ingredientsList = context.dayDish.map(dish => dish.ingredients);
+
+// Log or use the ingredientsList as needed
+console.log(ingredientsList);
 
 const meals = context.dayDish
 .filter((meal) => meal.group !== "Dessert")

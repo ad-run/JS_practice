@@ -19,24 +19,67 @@
     
 <div class="flex">
 
-<div class="subtitle"> {{this.title}}</div>
-<div class="text text-blue">{{this.mealTime}}</div>
-<div class="text-aqua">Ingrediens: {{this.ingredients}}</div>
+<div class="subtitle text-right"> {{this.title}}</div>
+<div class="text text-blue text-right subtitle-5">{{this.mealTime}}</div>
+
+<div class="text-aqua text-right"><span class="subtitle-5">   Ingredients:</span>
+    <ul class="text" id="list-no-bullet">
+        {{#each (splitIngredients this.ingredients)}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
 </div>
-<img src="{{this.image}}" alt="" class="responsive-image card">
+<div class="text-aqua text-right"><span class="subtitle-5">   Instructions:</span>
+    <ul class="text" id="list-circle">
+        {{#each (splitinstructionsStep this.instructions)}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+
+</div>
+
+
+<div class="flex">
+    <img src="{{this.image}}" alt="" class="responsive-image card">
+<p class="label text-blue">A {{this.taste}} {{this.title}}</p>
+</div>
+
+
 </div>
 {{else}}
 
-<div class="container grid">
-    <img src="{{this.image}}" alt="" class="responsive-image card">
+    <div class="container grid">
+
+    <div class="flex">
+        <img src="{{this.image}}" alt="" class="responsive-image card">
+        <p class="label text-blue">A {{this.taste}} {{this.title}}</p>
+    </div>
+
     <div class="flex">
     
-    <div class="subtitle"> {{this.title}}</div>
-    <div class="text text-blue">{{this.mealTime}}</div>
-    <div class="text-aqua">Ingrediens: {{this.ingredients}}</div>
+    <div class="subtitle text-left "> {{this.title}}</div>
+    <div class="text text-blue text-left subtitle-5">{{this.mealTime}}</div>
+
+    <div class="text-aqua text-left"><span class="subtitle-5"> Ingredients:</span>
+        <ul id="list-no-bullet">
+{{#each (splitIngredients this.ingredients)}}
+          <li>{{this}}</li>
+{{/each}}
+        </ul>
+     </div>
+     <div class="text-aqua text-left"><span class="subtitle-5">   Instructions:</span>
+        <ul class="text" id="list-circle">
+            {{#each (splitinstructionsStep this.instructions)}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
     </div>
     
     </div>
+
+    
 {{/if}}
 {{/each}}
     </script>
@@ -91,11 +134,11 @@
 
 </div> 
 
-
+<div class="background-mealMaker">
 <div id="mealInformation" class="text-center container">
 
 </div>
-
+</div>
 
  <script src="meal-maker.js"></script>  
 </body>

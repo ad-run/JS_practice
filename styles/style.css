@@ -30,7 +30,6 @@
     height: auto;
     width: 100%;
     padding-top: 40px;
-    background-color: var(--color-white-100);
 }
 .imageGrid {
     display: grid;
@@ -70,10 +69,20 @@ Meal maker
 }
 #meal,
 #dessert {
-    color: bisque;
+    color: #ffe4c46e;
     font-size: var(--h5);
     text-indent: 5px;
 }
 .meal-list li{
     color: var(--color-white-75);
+}
+#list-no-bullet{
+    list-style-type: none;
+}
+#list-circle {
+    list-style-type: circle;
+}
+.background-mealMaker {
+    background-color: rgba(255, 228, 196, 0.377);
+
 }
