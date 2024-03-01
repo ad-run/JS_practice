@@ -16,11 +16,11 @@
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border-radius: 8%;
+    
+}
+.card img{
+ align-self: center;
     
 }
 /*
@@ -59,7 +59,7 @@ Meal maker
  border-radius: 12px;
 }
 .mealToday-btn {
-    align-self: flex-start;
+align-self: flex-start;
 }
 .meal-maker-img {
  max-width: 70%;
@@ -85,4 +85,7 @@ Meal maker
 .background-mealMaker {
     background-color: rgba(255, 228, 196, 0.5);
 
+}
+.left {
+align-self: start;
 }
