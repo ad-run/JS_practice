@@ -30,6 +30,11 @@
     --color-blue-50: rgba(95, 158, 160, 0.5);
     --color-blue-25: rgba(95, 158, 160, 0.25);
 
+    --color-yellow-100: #ffcc66;
+    --color-yellow-75: rgba(255, 204, 102, 0.75);
+    --color-yellow-50: rgba(255, 204, 102, 0.5);
+    --color-yellow-25: rgba(255, 204, 102, 0.25);
+
     --color-pink-100: rgba(255, 102, 102);
     --color-pink-75: rgba(255, 102, 102, 0.75);
     --color-pink-50: rgba(255, 102, 102, 0.5);
@@ -50,19 +55,20 @@
 /* Style rules for common buttons */
 
 .white-btn,
-.dark-btn {
+.dark-btn,
+.yellow-btn {
     cursor: pointer;
     font-size: var(--h5);
     font-family: var(--font-2);
     font-weight: 800;
     border-radius: 8px;
     border: none;
-    padding: 8px 30px;
+    padding: 8px 30px 12px 30px;
 
 }
 
 .white-btn {
-    color: var(--color-dark-25);
+    color: var(--color-dark-100);
     background-color: var(--color-white-75);
 }
 
@@ -70,6 +76,11 @@
     color: var(--color-white-100);
     background-color: var(--color-blue-75);
 }
+.yellow-btn {
+    color: var(--color-white-100);
+    background-color: var(--color-yellow-75);
+}
+
 
 #dessert-btn {
     cursor: pointer;
@@ -108,6 +119,10 @@ a {
 
 .text-pink {
     color: var(--color-pink-100);
+}
+
+.text-yellow {
+    color: var(--color-yellow-100);
 }
 
 /* Style rules for label */
