@@ -174,7 +174,9 @@ a {
 .hero {
     background-color: var(--color-dark-100);
 }
-
+.hero-25 {
+    background-color: var(--color-blue-25);
+}
 /*Style rules navbar*/
 
 .navbar {
@@ -236,14 +238,14 @@ a {
 .container {
     max-width: 1140px;
     margin: 0 auto;
-    align-items: center;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     padding: 40px 0;
-    gap: 50px;
+    gap: 25px;
 }
 .grid-3 {
     display: grid;
@@ -254,8 +256,6 @@ a {
 .flex {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
 
 }
