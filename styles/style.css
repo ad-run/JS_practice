@@ -61,6 +61,12 @@
 /*
 ** ! style rules for sectionThree
 */
+.sectionThree {
+    padding: 40px 0;
+    height: 300px;
+    width: 100%;
+    background-image:  linear-gradient(rgb(0, 132, 255), rgb(20, 196, 172));
+      };
 
 .sectionThree__left {
     max-width: 80%;
@@ -70,9 +76,118 @@
     font-family: var(--font-2);
     font-size: var(--body);
 }
-.sectionTree__right-button {
-    align-self: flex-start;
+
+
+/*
+** ! style rules for sectionFour
+*/
+.item-1-title,
+.item-2-title,
+.item-3-title,
+.item-4-title,
+.item-5-title,
+.item-6-title,
+.item-7-title,
+.item-1-image,
+.item-2-image,
+.item-3-image,
+.item-4-image,
+.item-5-image,
+.item-6-image,
+.item-7-image {
+    align-self: center;
 }
+
+.item-2-title {
+    grid-area: main-left-row2;
+    text-align: right;
+    justify-self: end;
+    color: darkcyan;
+}
+.item-2-image {
+    grid-area: main-left-img-row2;
+    justify-self: start;
+
+}
+.item-4-title {
+    grid-area: main-left-row4;
+    text-align: right;
+    justify-self: end;
+    color: #e34c26;
+}
+.item-4-image {
+    grid-area: main-left-img-row4;
+    justify-self: start;
+
+}
+.item-6-title {
+    grid-area: main-left-row6;
+    text-align: right;
+    justify-self: end;
+    color: blueviolet;
+}
+.item-6-image {
+    grid-area: main-left-img-row6;
+    justify-self: start;
+
+}
+.item-1-title {
+    grid-area: main-right-row1;
+    justify-self: start;
+    color: hsl(189, 66%, 48%);
+}
+
+.item-3-title {
+    grid-area: main-right-row3;
+    justify-self: start;
+    color: #f06529;
+}
+.item-1-image {
+    grid-area: main-right-img-row1;
+    justify-self: end;
+}
+
+.item-3-image {
+    grid-area: main-right-img-row3;
+    justify-self: end;
+}
+.item-5-title {
+    grid-area: main-right-row5;
+    justify-self: start;
+    color: #f0d24f;
+}
+.item-5-image {
+    grid-area: main-right-img-row5;
+    justify-self: end;
+}
+.item-7-title {
+    grid-area: main-right-row7;
+    justify-self: start;
+    color: darkslateblue;
+}
+.item-7-image {
+    grid-area: main-right-img-row7;
+    justify-self: end;
+}
+
+.sectionFour__stages {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 25% 2% 5% 2% 5% 2% 25% 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". . . . . main-right-img-row1 . main-right-row1 ."
+        ". main-left-row2 . main-left-img-row2  . . . . ."
+        ". . . . . main-right-img-row3 . main-right-row3 ."
+        ". main-left-row4 . main-left-img-row4  . . . . ."
+        ". . . . . main-right-img-row5 . main-right-row5 ."
+        ". main-left-row6 . main-left-img-row6  . . . . ."
+        ". . . . . main-right-img-row7 . main-right-row7 .";
+}
+.sectionFour-button {
+    align-self: center;
+}
+
 /* Meal maker
 */
 #mealMakerLogo{
