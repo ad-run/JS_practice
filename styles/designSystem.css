@@ -56,7 +56,8 @@
 
 .white-btn,
 .dark-btn,
-.yellow-btn {
+.yellow-btn,
+.pink-btn {
     cursor: pointer;
     font-size: var(--h5);
     font-family: var(--font-2);
@@ -78,9 +79,12 @@
 }
 .yellow-btn {
     color: var(--color-white-100);
-    background-color: var(--color-yellow-75);
+    background-color: var(--color-yellow-100);
 }
-
+.pink-btn {
+    color: var(--color-white-100);
+    background-color: var(--color-pink-100);
+}
 
 #dessert-btn {
     cursor: pointer;
@@ -174,8 +178,32 @@ a {
 .hero {
     background-color: var(--color-dark-100);
 }
-.hero-25 {
+.hero-75 {
+ 
+    border-top: var(--color-white-25);
+    border-bottom: var(--color-dark-100);
+    border-left: var(--color-dark-100);
+    border-right: var(--color-dark-100);
+    border-width: 1px;
+    border-style: dotted;
     background-color: var(--color-blue-25);
+}
+.after_hero {
+    background-color: var(--color-white-100);
+    position: relative;
+}
+.yellow-box {
+    background-color: #ffcc66;
+    width: 400px;
+    height: 400px;
+    align-self: center;
+    justify-self: center;
+    padding: 3rem;
+}
+.box {
+    background-color: var(--color-white-25);
+    width: 10rem;
+    height: 10rem;
 }
 /*Style rules navbar*/
 
@@ -229,7 +257,7 @@ a {
 }
 
 .navbar__logo--image{
-    max-width: 110px;
+    max-width: 90px;
     height: auto;
 }
 
@@ -250,16 +278,20 @@ a {
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 4px 0;
-    gap: 5px;
+    padding: 40px 0;
+    gap: 15px;
 }
 .flex {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
 }
-
+.inline-flex {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
 .responsive-image {
     max-width: 90%;
     height: auto;
@@ -320,4 +352,15 @@ a {
     .container {
         max-width: 90%;
     }
+}
+/* Style rules for footer */
+.footer {
+    
+    background-color: var(--color-pink-100);
+  
+    margin: 0 auto;
+    height: 150px;
+    position: relative;
+    bottom: 0px;
+
 }

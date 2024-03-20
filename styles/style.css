@@ -1,6 +1,7 @@
 /*
 ** ! style rules for sectionOne
 */
+
 .sectionOne__left--text {
     font-family: var(--font-2);
     font-size: var(--body);
@@ -62,16 +63,11 @@
 ** ! style rules for sectionThree
 */
 .sectionThree {
-    padding: 40px 0;
-    height: 300px;
-    width: 100%;
-    background-image:  linear-gradient(rgb(0, 132, 255), rgb(20, 196, 172));
-      };
-
-.sectionThree__left {
-    max-width: 80%;
+    position: relative;
+    padding: 20px 0;
 }
-.sectionTree__right-text {
+      
+.sectionThree__right-text {
     color: var(--color-dark-75);
     font-family: var(--font-2);
     font-size: var(--body);
@@ -186,6 +182,8 @@
 }
 .sectionFour-button {
     align-self: center;
+    justify-self: center;
+    margin-top: 40px;
 }
 
 /* Meal maker
@@ -224,3 +222,76 @@ align-self: flex-start;
 .left {
 align-self: start;
 }
+/* 
+Number Guesser
+*/
+.sectionThree {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+}
+.sectionThree__left-number,
+.box {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ align-self: center;
+ justify-self: center;
+}
+.sectionThree__left,
+.sectionThree__right {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+.sectionThree__left {
+    background-color: var(--color-yellow-50);
+}
+.sectionThree__right-content  {
+    padding-bottom: 20px;
+}
+.sectionThree__right-button {
+    align-self: center;
+}
+.sectionThree__right-number-control-left {
+    background-color: var(--color-white-100);
+    padding: 5px 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.sectionThree__right-number-control-right {
+    background-color: var(--color-white-100);
+    padding: 5px 10px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.sectionThree__right-number-control {
+    display: inline-flex;
+    gap: 1px;
+    padding-bottom: 20px;
+}
+
+.sectionFive__col-1,
+.sectionFive__col-2,
+.sectionFive__col-3 {
+    display: flex;
+    justify-content: start;
+    background-color: var(--color-white-100);
+    height: 190px;
+    padding: 30px;
+
+}
+
+.sectionFive__col-1-title,
+.sectionFive__col-2-title,
+.sectionFive__col-3-title {
+    color: var(--color-blue-100);
+}
+
+
+
+

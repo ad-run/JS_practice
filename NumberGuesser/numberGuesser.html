@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Guesser</title>
-    <link rel="stylesheet" href="styles/designSystem.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="../src/images/logo/ad_run_logo.png">
+    <link rel="stylesheet" href="..//styles/designSystem.css">
+    <link rel="stylesheet" href="..//styles/style.css">
+    <link rel="icon" href="..//src/images/logo/ad_run_logo.png">
 </head>
 <body>
+
     <div class="hero">
         <div class="navbar container">
             <div class="navbar__logo text-white">
-                <img src="/src/images/logo/ad_run_logo.png" class="navbar__logo--image" alt="AD-run web development logo">
-                <div class="navbar__logo--text">AD web portfolio</div>
+                <img src="..//src/images/logo/ad_run_logo.png" class="navbar__logo--image"
+                    alt="AD-run web development logo">
+                <div class="navbar__logo--text label">AD web portfolio</div>
             </div>
             <div class="navbar__menu hidden text-white">
                 <a href="/index.html" class="navbar__menu--1">Home</a>
@@ -26,8 +28,62 @@
                 <i class="bi bi-x-lg hide"></i>
             </div>
         </div>
-    
+    </div>
+
+<div class="hero-75">
+    <div class="sectionTwo container">
+        <div class="sectionTwo__content flex text-dark text-center">
+            <div class="sectionTwo__content-title title">Number Guesser !</div>
+            <div class="sectionTwo__content-round label">Round <span id="round-number">1</span>
+            </div>
+            <div class="sectionTwo__content-target subtitle-5">Target number: <span id="target-number">?</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectionThree container grid">
+        <div class="sectionThree__left yellow-box flex card">
+            <div class="sectionThree__left-title text-center subtitle-3">Computer</div>      
+            <div class="sectionThree__left-score">Score: <span id="computer-score">0</span></div>
+            <div class="sectionThree__left-number text-center title card" id="computer-guess">?</div>
+            <div class="winning-text" id="computer-wins"></div>
+        </div>
+        <div class="sectionThree__right yellow-box flex card">
+            <div class="sectionThree__right-title text-center subtitle-3">You</div>
+            <div class="sectionThree__right-score">Score: <span id="human-score">0</span></div>
+            <input class="sectionThree__right-number box text-center title card" type="number" id="human-guess" min=0 max=9 value=0>
+            <div class="sectionThree__right-number-control inline-flex">
+                <div class="sectionThree__right-number-control-left" id="subtract">-</div>
+                <div class="sectionThree__right-number-control-right" id="add">+</div>
+            </div>
+            <button class="sectionThree__right-button pink-btn" id="guess">Make a Guess</button>
+
+        </div>
+    </div>
+    <div class="sectionFour container flex">
+        <button class="sectionFour-button dark-btn text-center" id="next-round">Next Round</button>
+    </div>
+    <div class="sectionFive grid-3 container">
+<div class="sectionFive__col-1 flex">
+    <div class="sectionFive__col-1-title subtitle-3">Step 1</div>
+    <div class="sectionFive__col-1-text ">Input a number between 0 and 9</div>
+</div>
+<div class="sectionFive__col-2 flex">
+    <div class="sectionFive__col-2-title subtitle-3">Step 2</div>
+    <div class="sectionFive__col-2-text">Click "Make a Guess" to submit your guess and see who won the round.</div>
+</div>
+<div class="sectionFive__col-3 flex">
+    <div class="sectionFive__col-3-title subtitle-3">Step 3</div>
+    <div class="sectionFive__col-3-text text">Click "Next Round" to play again.</div>
+</div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+<script src="..//main.js"></script> 
+<script src="script.js"></script>
+<script src="game.js"></script>
     
 </body>
-<script src="main.js"></script> 
+
 </html>
